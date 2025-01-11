@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【Desmos】関数ツール</title>
+    <link rel="icon" href="数学ロゴ.png">
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        overflow: hidden;
+      }
+
+      .UI全体 {
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .入力欄 {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+      }
+
+      .入力欄:focus {
+        border-color: #007bff;
+      }
+
+      .ボタン {
+        background-color: #999; /* 適宜調整 */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      * { /* 拡大縮小禁止 */
+        -webkit-touch-callout: none; /* iOS */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        user-select: none; /* Standard syntax */
+      }
+    </style>
+</head>
+<body>
+  <div class="UI全体">
+    <h1>【Desmos】関数ツールVer.0.1</h1>
+    <p>下の欄に座標を入力し、生成方法を選択して生成ボタンを押すと式が生成されます。<br>
+      コピーボタンで生成された式をコピーできます。<br>
+      機能は順次追加していくのでお待ちください。</p>
+    <div class="入力欄">
+    <input placeholder="x1" type="text" id="x1">
+    <input placeholder="y1" type="text" id="y1">
+    <input placeholder="x2" type="text" id="x2">
+    <input placeholder="y2" type="text" id="y2">
+    <input placeholder="x3" type="text" id="x3">
+    <input placeholder="y3" type="text" id="y3">
+    </div>
+    <select class="セレクトボックス" id="生成方法選択">
+      <option value="二点を通る直線(x1,y1)(x2,y2)">二点を通る直線(x1,y1)(x2,y2)</option>
+      <option value="二点を通る直線(x1,y1)(x3,y3)">二点を通る直線(x1,y1)(x3,y3)</option>
+      <option value="二点を通る直線(x2,y2)(x3,y3)">二点を通る直線(x2,y2)(x3,y3)</option>
+    </select>
+    <div class="ボタン">
+    <button onclick="生成()">生成</button>
+    <button id="コピーボタン">コピー</button>
+    </div>
+    <p class="出力欄" id="出力欄"></p>
+  </div>
+
+    <script src="test.js"></script>
+</body>
+</html>
