@@ -1,6 +1,6 @@
 ## 概要
-関数グラフツール「[desmos](https://www.desmos.com/calculator?lang=ja)」のためのツールです。
-[このページ](https://peyu-7545.github.io/Desmos-tool/)に順次機能を追加していく予定です。
+関数グラフツール「[desmos](https://www.desmos.com/calculator?lang=ja)」のためのツールです。<br>
+[このページ](https://peyu-7545.github.io/Desmos-tool/)に順次機能を追加していく予定です。<br>
 主な使い方は同ページに載せてありますのでそちらをご覧ください。
 
 なお、製作者はコーディング初心者ですので使い勝手の悪さはご容赦ください。
